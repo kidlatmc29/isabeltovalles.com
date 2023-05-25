@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          su comp sci 23' | software engineer | sea &rarr; sf
+          su comp sci 23&apos; | software engineer | sea &rarr; sf
         </p>
 
         <div className={styles.grid}>
