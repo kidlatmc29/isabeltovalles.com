@@ -21,13 +21,11 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Seattle U - Spill the Tea Resources &rarr;</h2>
+          <a href="https://isabeltovalles.com/cs-resources/spill-tea" className={styles.card}>
+            <h2>Spill the Tea Resources <sub> 🧋 </sub> &rarr;</h2>
             <p>List of resources for computer science internships.</p>
           </a>
-        </div>
-
-        <div className={styles.grid}>
+       
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Contact Me &rarr;</h2>
             <p> Ways to get in touch!</p>
