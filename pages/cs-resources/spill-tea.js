@@ -32,7 +32,7 @@ export default function ResourcesPage() {
           <div className={styles.card}> 
             <h2> Job Boards 🪧 </h2>
             <p> I recommend Handshake, LinkedIn, and Indeed for finding internships/jobs.
-                They have pretty robust filters and searching for the positions you're looking for
+                They have pretty robust filters and searching for the positions you&apos;re looking for
                 and to see if you meet the requirements of a position.  
             </p>
       
