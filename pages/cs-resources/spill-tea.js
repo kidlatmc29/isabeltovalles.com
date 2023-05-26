@@ -16,7 +16,6 @@ export default function ResourcesPage() {
           Spill the Tea Resources <sub> 🧋 </sub>
         </h1>
 
-
         <div className={styles.grid}>
           <a href="https://seattleu.instructure.com/courses/1600628" className={styles.card}>
             <h2> SU CS Department Canvas &rarr;</h2>
@@ -29,6 +28,17 @@ export default function ResourcesPage() {
                 Their services include resume building, job searching, interview prep, and mock interviews. 
             </p>
           </a>
+
+          <div className={styles.card}> 
+            <h2> Job Boards 🪧 </h2>
+            <p> I recommend Handshake, LinkedIn, and Indeed for finding internships/jobs.
+                They have pretty robust filters and searching for the positions you're looking for
+                and to see if you meet the requirements of a position.  
+            </p>
+      
+          </div> 
+    
+          
         </div>
 
       </main>
