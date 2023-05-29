@@ -34,7 +34,7 @@ export default function Home() {
             <p>List of resources for computer science internships.</p>
           </a>
        
-          <a href="https://nextjs.org/docs" className={styles.card}>
+          <a href="https://isabeltovalles.com/contact-me" className={styles.card}>
             <h2>Contact Me &rarr;</h2>
             <p> Ways to get in touch!</p>
           </a>
