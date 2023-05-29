@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
 
         <Image
-          src="/main_pfp.jpg"
+          src="../public/main_pfp.jpg"
           alt="Headshot of Isabel Ovalles"
           width={225}
           height={300}
