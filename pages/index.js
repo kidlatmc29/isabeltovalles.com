@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import headshot from '../public/main_pfp.jpg'
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
         </h1>
 
         <Image
-          src="../public/main_pfp.jpg"
+          src={headshot}
           alt="Headshot of Isabel Ovalles"
           width={225}
           height={300}
