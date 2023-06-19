@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import gif_pfp from '../public/sunflower_pfp.GIF'
+import gif_pfp from '../public/sunflower_pfp.gif'
 
 export default function Home() {
   return (
