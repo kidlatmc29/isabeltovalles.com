@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import headshot from '../public/main_pfp.jpg'
+import gif_pfp from '../public/sunflower_pfp.gif'
 
 export default function Home() {
   return (
@@ -18,9 +18,9 @@ export default function Home() {
         </h1>
 
         <Image
-          src={headshot}
-          alt="Headshot of Isabel Ovalles"
-          width={225}
+          src={gif_pfp}
+          alt="Gif of Isabel Ovalles with sunflowers"
+          width={300}
           height={300}
         />
         
@@ -32,6 +32,11 @@ export default function Home() {
           <a href="https://isabeltovalles.com/cs-resources/spill-tea" className={styles.card}>
             <h2>Spill the Tea Resources <sub> 🧋 </sub> &rarr;</h2>
             <p>List of resources for computer science internships.</p>
+          </a>
+          
+          <a href="" className={styles.card}>
+            <h2> My Socials <sub> 👥 </sub> &rarr;</h2>
+            <p> Places I exist on the interwebs.</p>
           </a>
        
           <a href="https://isabeltovalles.com/contact-me" className={styles.card}>
