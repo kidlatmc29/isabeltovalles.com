@@ -11,12 +11,12 @@ export default function SocialsPage() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          My Socials! <sub> 📱 </sub>
+          My Socials! <sub> 👥 </sub>
         </h1>
 
         <div className={styles.grid}>
 
-          <a target="_blank" href="" className={styles.card}>
+          <a target="_blank" href="https://github.com/kidlatmc29" className={styles.card}>
               <h2> 💻 Github &rarr;</h2>
               <p> Repos of my uni days and personal projects. </p>
           </a>
