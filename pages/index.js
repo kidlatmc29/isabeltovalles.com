@@ -34,7 +34,7 @@ export default function Home() {
             <p>List of resources for computer science internships.</p>
           </a>
           
-          <a href="" className={styles.card}>
+          <a href="https://isabeltovalles.com/cs-resources/socials" className={styles.card}>
             <h2> My Socials <sub> 👥 </sub> &rarr;</h2>
             <p> Places I exist on the interwebs.</p>
           </a>
