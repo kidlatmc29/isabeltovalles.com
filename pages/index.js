@@ -43,6 +43,11 @@ export default function Home() {
             <h2>Contact Me <sub> ☎️ </sub>&rarr;</h2>
             <p> Ways to get in touch!</p>
           </a>
+
+          <a href="" className={styles.card}>
+            <h2> My Resume <sub> 📄 </sub>&rarr;</h2>
+            <p> COMING SOON! </p>
+          </a>
         </div>
 
       </main>
