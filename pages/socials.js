@@ -30,17 +30,6 @@ export default function SocialsPage() {
             <h2> 📺 YouTube &rarr;</h2>
             <p> Mostly videos from my college courses and cs related videos.</p>
           </a>
-
-          <a target="_blank" href="https://www.instagram.com/kidlatmc29/" className={styles.card}>
-            <h2> 📷 Instagram &rarr;</h2>
-            <p> Photos of my life.  </p>
-          </a>
-
-          <a target="_blank" href="https://www.tiktok.com/@ozabell?is_from_webapp=1&sender_device=pc" className={styles.card}>
-            <h2> 🕰️ TikTok &rarr;</h2>
-            <p> Funny short videos of my life and some things related to gaming, skincare, and computer science. </p>
-          </a>
-
         </div> 
       </main>
     </div>
