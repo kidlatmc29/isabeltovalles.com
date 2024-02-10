@@ -24,8 +24,8 @@ export default function Home() {
           height={300}
         />
         
-        <p className={styles.description}>
-          su comp sci 23&apos; | software engineer | sea &rarr; sf
+        <p className={`${styles.description} ${styles.aboutme}`}>
+          multiplayer gameplay engineer | su comp sci 23&apos; | sea &rarr; sf
         </p>
 
         <div className={styles.grid}>
