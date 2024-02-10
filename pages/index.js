@@ -35,7 +35,7 @@ export default function Home() {
           </a>
           
           <a href="https://isabeltovalles.com/socials" className={styles.card}>
-            <h2> My Socials <sub> 👥 </sub> &rarr;</h2>
+            <h2> Socials <sub> 👥 </sub> &rarr;</h2>
             <p> Places I exist on the interwebs.</p>
           </a>
        
@@ -45,7 +45,7 @@ export default function Home() {
           </a>
 
           <a href="" className={styles.card}>
-            <h2> My Resume <sub> 📄 </sub>&rarr;</h2>
+            <h2> Resume <sub> 📄 </sub>&rarr;</h2>
             <p> COMING SOON! </p>
           </a>
         </div>
