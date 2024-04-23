@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import gif_pfp from '../public/sunflower_pfp.gif'
+import pfp from '../public/chibi_pfp.png'
 
 export default function Home() {
   return (
@@ -18,8 +18,8 @@ export default function Home() {
         </h1>
 
         <Image
-          src={gif_pfp}
-          alt="Gif of Isabel Ovalles with sunflowers"
+          src={pfp}
+          alt="Chibi drawing of Isabel Ovalles drinking boba with a video game controller next to her"
           width={300}
           height={300}
         />
