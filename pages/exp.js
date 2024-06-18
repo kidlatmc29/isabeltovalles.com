@@ -7,7 +7,7 @@ export default function ExperiencePage() {
     <div className={styles.container}>
       <Head>
         <title>ito&apos;s work experience</title>
-        <meta name="description" content="Isabel T Ovalles Work Experience" />
+        <meta name="description" content="ito" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -15,6 +15,11 @@ export default function ExperiencePage() {
         <h1 className={styles.title}>
           Experience <sub> 🧋 </sub>
         </h1>
+
+        <p className={`${styles.description} ${styles.aboutme}`}>
+          work in progress 
+        </p>
+
       </main>
     </div>
   )
