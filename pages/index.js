@@ -25,8 +25,13 @@ export default function Home() {
         />
         
         <p className={`${styles.description} ${styles.aboutme}`}>
-          multiplayer gameplay engineer | su comp sci 23&apos; | sea &rarr; sf
+          gameplay engineer | su comp sci 23&apos; | sea &rarr; sf
         </p>
+
+        <a href="https://isabeltovalles.com/exp" className={styles.card}>
+            <h2> Experience <sub> 📄 </sub>&rarr;</h2>
+            <p> COMING SOON! </p>
+          </a>
 
         <div className={styles.grid}>
           <a href="https://isabeltovalles.com/cs-resources/spill-tea" className={styles.card}>
@@ -42,11 +47,6 @@ export default function Home() {
           <a href="https://isabeltovalles.com/contact-me" className={styles.card}>
             <h2>Contact Me <sub> ☎️ </sub>&rarr;</h2>
             <p> Ways to get in touch!</p>
-          </a>
-
-          <a href="" className={styles.card}>
-            <h2> Resume <sub> 📄 </sub>&rarr;</h2>
-            <p> COMING SOON! </p>
           </a>
         </div>
 
