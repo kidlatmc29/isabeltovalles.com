@@ -8,15 +8,10 @@ import NextImage from "next/image";
 export default function HomeNavBar() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const [mode, setMode] = useState(true);
 
   const handleThemeSwitch = () => {
-    setMode(!mode);
+    setTheme(theme === 'light' ? 'dark' : 'light');
   };
-
-  useEffect(() => {
-    setTheme(mode ? 'light' : 'dark');
-  }, [mode])
 
   useEffect(() => {
     setMounted(true);
@@ -34,7 +29,7 @@ export default function HomeNavBar() {
                 color="default" 
                 variant="light"
                 size="md"
-                href="https://isabeltovalles.com"
+                href="/"
             >
                 <Image
                   as={NextImage}
@@ -101,7 +96,7 @@ export default function HomeNavBar() {
                 size="md"
                 className="hover:translate-x-1 hover:-translate-y-1 transition-transform duration-300 ease-in-out"
             >
-                {mode ? '🌕' : '🌑'}
+                {theme === 'light' ? '🌕' : '🌑'}
           </Button>
         </NavbarItem>
       </NavbarContent>
