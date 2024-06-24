@@ -1,3 +1,11 @@
+/* globals.css */
+
+/* Include the @tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your existing global styles */
 html,
 body {
   padding: 0;
