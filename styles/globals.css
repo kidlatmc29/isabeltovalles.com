@@ -23,7 +23,15 @@ a {
 }
 
 .container {
-  padding: 0 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;  
+  padding-right: 2rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 #center-img-container {
@@ -182,3 +190,20 @@ a {
   justify-content: center;
   align-items: center;
 }  
+
+.navbarHover {
+  transition: transform 300ms ease-in-out;
+}
+
+.navbarHover:hover {
+  transform: translateX(0.25rem) translateY(-0.25rem); 
+}
+
+.navbarRotate {
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.navbarRotate:hover {
+  transform: rotate(180deg);
+}

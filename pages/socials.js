@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 export default function SocialsPage() {
   return (
-    <div className="mx-auto px-8 flex flex-col items-center justify-center min-h-screen">
+    <div className="container">
       <Head>
         <title>ito</title>
         <link rel="icon" href="/favicon.ico" />

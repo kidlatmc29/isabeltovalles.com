@@ -115,7 +115,7 @@ export default function HomeNavBar() {
               color="default" 
               variant="light"
               size="md"
-              className="hover:rotate-180 transform origin-center"
+              className="navbarRotate"
             >
               {theme === 'light' ? '🌕' : '🌑'}
             </Button>
@@ -175,7 +175,7 @@ export default function HomeNavBar() {
               color="default" 
               variant="light"
               size="md"
-              className="hover:translate-x-1 hover:-translate-y-1 transition-transform duration-300 ease-in-out"
+              className="navbarHover"
             >
               {theme === 'light' ? '🌕' : '🌑'}
             </Button>
