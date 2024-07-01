@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
- 
+
+// Starting to work on this page
 export default function ExperiencePage() {
   return (
     <div className="container">
