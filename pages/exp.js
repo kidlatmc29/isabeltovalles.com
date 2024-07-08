@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
+import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
 
 // Starting to work on this page
 export default function ExperiencePage() {

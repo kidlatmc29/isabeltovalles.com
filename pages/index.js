@@ -1,6 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
+//import Image from 'next/image'
 import pfp from '../public/chibi_pfp.png'
+import NextImage from "next/image";
+import {Card, CardHeader, CardBody, Divider, Image, CardFooter} from "@nextui-org/react";
 
 export default function Home() {
   return (
@@ -17,24 +19,24 @@ export default function Home() {
           Isabel T Ovalles <sub> 🧋 </sub>
         </h1>
 
-        <Image
+        <NextImage
           src={pfp}
           alt="Chibi drawing of Isabel Ovalles drinking boba with a video game controller next to her"
           width={300}
           height={300}
-          className="my-4"
+          className="my-4 opacity-100"
         />
         
         <p className="description aboutme">
           gameplay engineer | su comp sci 23&apos; | sea &rarr; sf
         </p>
 
-        <a href="https://isabeltovalles.com/exp" className="card">
+        {/* <a href="https://isabeltovalles.com/exp" className="card">
           <h2> Experience <sub> 📄 </sub>&rarr;</h2>
           <p> COMING SOON! </p>
         </a>
 
-        <div className="grid">
+        <div className="max-w-[800px] gap-2 grid px-8 justify-items-center sm:grid-cols-2 md:grid-cols-4">
           <a href="https://isabeltovalles.com/cs-resources/spill-tea" className="card">
             <h2>Spill the Tea Resources <sub> 🧋 </sub> &rarr;</h2>
             <p>List of resources for computer science internships.</p>
@@ -49,6 +51,157 @@ export default function Home() {
             <h2>Contact Me <sub> ☎️ </sub>&rarr;</h2>
             <p> Ways to get in touch!</p>
           </a>
+
+          <a href="https://isabeltovalles.com/contact-me" className="card">
+            <h2>Contact Me <sub> ☎️ </sub>&rarr;</h2>
+            <p> Ways to get in touch!</p>
+          </a>
+        </div> */}
+
+
+        {/* TODO: Set a fixed width/height for the images, find sutable images for each position */}
+        {/* Note: Each Card online is set to the size of image, so the largest image in each row determines all the others */}
+
+        <div className="max-w-[800px] gap-2 grid px-8 justify-items-center sm:grid-cols-2 md:grid-cols-3">
+          {/* First Card */}
+          <Card className="py-4">
+            <CardHeader className="pb-0 pt-2 px-4 flex-col !items-start">
+              <p className="text-tiny uppercase font-bold">Daily Mix</p>
+              <small className="text-default-500">12 Tracks</small>
+              <h4 className="font-bold text-large">Frontend Radio</h4>
+            </CardHeader>
+            <Divider/>
+              <Image
+                removeWrapper
+                alt="Card background"
+                className="object-cover rounded-xl"
+                src="https://nextui.org/images/hero-card-complete.jpeg"
+                width={270}
+              />
+            <Divider/>
+            <CardFooter>
+              <p className="text-tiny uppercase font-bold">Daily Mix</p>
+              <small className="text-default-500">12 Tracks</small>
+            </CardFooter>
+          </Card>
+          {/* Second Card */}
+          <Card>
+            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+              <p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
+              <h4 className="text-white font-medium text-large">Stream the Acme event</h4>
+            </CardHeader>
+            <Image
+              removeWrapper
+              alt="Card background"
+              className="z-0 w-full h-full object-cover"
+              src="https://nextui.org/images/card-example-4.jpeg"
+            />
+          </Card>
+          {/* Third Card */}
+          <Card isFooterBlurred>
+            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+              <p className="text-tiny text-white/60 uppercase font-bold">Activision - Sledgehammer Games</p>
+              <h4 className="text-white/90 font-medium text-xl">Associate Gameplay Engineer</h4>
+            </CardHeader>
+            <Image
+              removeWrapper
+              alt="Relaxing app background"
+              className="full-cover"
+              src="https://nextui.org/images/card-example-5.jpeg"
+            />
+            <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+              <div className="flex flex-grow gap-2 items-center">
+                <div className="flex flex-col">
+                  <p className="text-tiny text-white/60">Foster City, CA</p>
+                  <p className="text-tiny text-white/60">Sept 2023 - Present</p>
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+          {/* Fourth Card */}
+          <Card>
+            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+              <p className="text-white/90 font-medium text-xl">Activision - Sledgehammer Games</p>
+              <h4 className="text-tiny text-white/60 uppercase font-bold">Gameplay Engineer Intern</h4>
+            </CardHeader>
+            <Image
+              removeWrapper
+              alt="Relaxing app background"
+              className="z-0 w-full h-full object-cover"
+              src="https://nextui.org/images/card-example-4.jpeg"
+            />
+            <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+              <div className="flex flex-grow gap-2 items-center">
+                <div className="flex flex-col">
+                  <p className="text-white/90 font-medium text-xl">Foster City, CA</p>
+                  <p className="text-tiny text-white/60">Jun 2022 - Sept 2022</p>
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+          {/* NEW Card */}
+          <Card>
+            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+              <p className="text-white/90 font-medium text-xl">Activision - Sledgehammer Games</p>
+              <h4 className="text-tiny text-white/60 uppercase font-bold">Gameplay Engineer Intern</h4>
+            </CardHeader>
+            <Image
+              removeWrapper
+              alt="Relaxing app background"
+              className="z-0 w-full h-full object-cover"
+              src="https://nextui.org/images/card-example-5.jpeg"
+            />
+            <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+              <div className="flex flex-grow gap-2 items-center">
+                <div className="flex flex-col">
+                  <p className="text-white/90 font-medium text-xl">Foster City, CA</p>
+                  <p className="text-tiny text-white/60">Jun 2022 - Sept 2022</p>
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+           {/* NEW Card */}
+           <Card>
+            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+              <p className="text-white/90 font-medium text-xl">Activision - Sledgehammer Games</p>
+              <h4 className="text-tiny text-white/60 uppercase font-bold">Gameplay Engineer Intern</h4>
+            </CardHeader>
+            <Image
+              removeWrapper
+              alt="Relaxing app background"
+              className="z-0 w-full h-full object-cover"
+              src="https://nextui.org/images/hero-card-complete.jpeg"
+            />
+            <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+              <div className="flex flex-grow gap-2 items-center">
+                <div className="flex flex-col">
+                  <p className="text-white/90 font-medium text-xl">Foster City, CA</p>
+                  <p className="text-tiny text-white/60">Jun 2022 - Sept 2022</p>
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+           {/* NEW Card */}
+           <Card>
+            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+              <p className="text-white/90 font-medium text-xl">Activision - Sledgehammer Games</p>
+              <h4 className="text-tiny text-white/60 uppercase font-bold">Gameplay Engineer Intern</h4>
+            </CardHeader>
+            <Image
+              removeWrapper
+              alt="Relaxing app background"
+              className="z-0 w-full h-full object-cover"
+              src="https://nextui.org/images/card-example-3.jpeg"
+            />
+            <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+              <div className="flex flex-grow gap-2 items-center">
+                <div className="flex flex-col">
+                  <p className="text-white/90 font-medium text-xl">Foster City, CA</p>
+                  <p className="text-tiny text-white/60">Jun 2022 - Sept 2022</p>
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
         </div>
       </main>
     </div>
