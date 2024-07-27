@@ -1,9 +1,80 @@
 import Head from 'next/head'
-// import Image from 'next/image'
-import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
+import NextImage from "next/image";
+import { useRouter } from 'next/router';
+import {Card, CardHeader, Divider, Image, CardFooter, CardBody, Button} from "@nextui-org/react";
+import COD from '../pictures/MW3_1.jpg'
+import minecraft from '../pictures/cube.jpg'  
+import sledge from '../pictures/sledgeHammer.jpg'
+import SU from '../pictures/seaRed.png'
+import snakeIcon from '../pictures/snake.jpg'
 
-// Starting to work on this page
+// *Note: There is combined tailwind css and standard css from global.css being used in this file 
 export default function ExperiencePage() {
+  const router = useRouter();
+
+  const handleCardPress = (url) => {
+    router.push(url)
+  };
+
+  const list = [
+    {
+      url: "http://localhost:3000/exp",
+      company: "Activision - Sledgehammer Games",
+      position: "Associate Gameplay Engineer",
+      img: COD, // can't directly use the path, img won't show up on live 
+      location: "Foster City, CA",
+      date: "Sept 2023 - Present",
+    },
+    {
+      url: "http://localhost:3000/exp",
+      company: "Activision - Sledgehammer Games",
+      position: "Gameplay Engineer Intern",
+      img: sledge,
+      location: "Foster City, CA",
+      date: "June 2022 - Sept 2022",
+    },
+    {
+      url: "http://localhost:3000/exp",
+      company: "Seattle University - Computer Science Department",
+      position: "Teaching Assistant",
+      img: SU,
+      location: "Seattle, WA",
+      date: "Sept 2022 - June 2023",
+    },
+    {
+      url: "http://localhost:3000/exp",
+      company: "Seattle University - Computer Science Department",
+      position: "Tutor",
+      img: SU,
+      location: "Seattle, WA",
+      date: "Sept 2022 - June 2023",
+    },
+    {
+      url: "http://localhost:3000/exp",
+      company: "Price Tech Press",
+      position: "Game Designer and Technical Writer Intern",
+      img: snakeIcon,
+      location: "Remote",
+      date: "Sept 2020 - Jan 2021",
+    },
+    {
+      url: "http://localhost:3000/exp",
+      company: "Microsoft - Mojang Studios",
+      position: "Software Engineer Intern",
+      img: minecraft,
+      location: "Redmond, WA",
+      date: "June 2019 - Sept 2019",
+    },
+    {
+      url: "http://localhost:3000/exp",
+      company: "Microsoft - Mojang Studios",
+      position: "Software Engineer Intern",
+      img: minecraft,
+      location: "Redmond, WA",
+      date: "June 2018 - Aug 2018",
+    },
+  ]
+
   return (
     <div className="container">
       <Head>
@@ -17,11 +88,43 @@ export default function ExperiencePage() {
         <h1 className="title">
           Experience <sub> 🧋 </sub>
         </h1>
-        {/* Alen was here */}
-        <p className="description aboutme">
-          work in progress 
-        </p>
 
+        {/* TODO: Convert tailwind css to standard css into global */}
+        {/* TODO: Figure out spacing between title and grid */}
+
+        <div className="expGrid">
+          {list.map((item, index) => (
+            <Card key={index}> 
+              <CardHeader className='expHeaderOuter'> 
+                <div className="expHeaderInner">
+                  <p className="text-lg">{item.company}</p>                       {/* Tailwind css */}
+                  <p className="text-small text-default-500">{item.position}</p>  {/* Tailwind css */}
+                </div>
+              </CardHeader>
+              <Divider/>
+              <CardBody className='p-0'>
+                <Image
+                    as={NextImage}
+                    className="expImage"
+                    removeWrapper
+                    radius='none'
+                    alt={item.company}
+                    src={item.img}
+                  />
+              </CardBody>
+              <Divider/>
+              <CardFooter>
+                <div className="expFooterOuter">
+                  <div className="expFooterInner">
+                    <p className="text-xs">{item.location}</p>  {/* Tailwind css */}
+                    <p className="text-xs">{item.date}</p>      {/* Tailwind css */}
+                  </div>
+                </div>
+                <Button radius="full" size="sm" onPress={() => handleCardPress(item.url)}>Learn More</Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
       </main>
     </div>
   )

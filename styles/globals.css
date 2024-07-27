@@ -104,14 +104,6 @@ a {
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-/* .grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-} */
-
 .card {
   margin: 1rem;
   padding: 1.5rem;
@@ -155,6 +147,7 @@ a {
 }
 
 /* Styles from home.module.css */
+/* Used in index.js file */
 .home {
   display: flex;
   flex-direction: column;
@@ -191,6 +184,7 @@ a {
   align-items: center;
 }  
 
+/* Navbar Animation Styling */
 .navbarHover {
   transition: transform 300ms ease-in-out;
 }
@@ -208,21 +202,57 @@ a {
   transform: rotate(180deg);
 }
 
-.full-cover {
-  position: relative;
-  z-index: 0;
-  width: 100%;
-  height: 100%; /* Adjust height as needed */
-  overflow: hidden; /* Ensure content does not overflow */
+/* Experince Page Styling */
+.expGrid {
+  max-width: 800px;
+  display: grid;
+  gap: 0.5rem; 
+  justify-items: center;
+  padding-left: 2rem; 
+  padding-right: 2rem; 
 }
 
-.full-cover img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  object-fit: cover;
+/* For small screens and up */
+@media (min-width: 640px) {
+  .expGrid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* For medium screens and up */
+@media (min-width: 768px) {
+  .expGrid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.expHeaderOuter {
+  height: 5rem;
+  padding-top: 1.25rem; 
+  padding-left: 1rem;
+}
+
+.expHeaderInner {
+  display: flex;
+  flex-direction: column;
+}
+
+.expImage {
+  z-index: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.expFooterOuter {
+  display: flex;
+  flex-grow: 1;
+  gap: 0.5rem;
+}
+
+.expFooterInner {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
