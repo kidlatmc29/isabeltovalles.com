@@ -18,7 +18,7 @@ export default function ExperiencePage() {
 
   const list = [
     {
-      url: "http://localhost:3000/exp",
+      url: "https://isabeltovalles.com/exp",
       company: "Activision - Sledgehammer Games",
       position: "Associate Gameplay Engineer",
       img: callOfDuty, // can't directly use the path, img won't show up on live 
@@ -26,7 +26,7 @@ export default function ExperiencePage() {
       date: "Sept 2023 - Present",
     },
     {
-      url: "http://localhost:3000/exp",
+      url: "https://isabeltovalles.com/exp",
       company: "Activision - Sledgehammer Games",
       position: "Gameplay Engineer Intern",
       img: sledge,
@@ -34,7 +34,7 @@ export default function ExperiencePage() {
       date: "June 2022 - Sept 2022",
     },
     {
-      url: "http://localhost:3000/exp",
+      url: "https://isabeltovalles.com/exp",
       company: "Seattle University - Computer Science Department",
       position: "Teaching Assistant",
       img: seattleU,
@@ -42,7 +42,7 @@ export default function ExperiencePage() {
       date: "Sept 2022 - June 2023",
     },
     {
-      url: "http://localhost:3000/exp",
+      url: "https://isabeltovalles.com/exp",
       company: "Seattle University - Computer Science Department",
       position: "Tutor",
       img: seattleU,
@@ -50,7 +50,7 @@ export default function ExperiencePage() {
       date: "Sept 2022 - June 2023",
     },
     {
-      url: "http://localhost:3000/exp",
+      url: "https://isabeltovalles.com/exp",
       company: "Price Tech Press",
       position: "Game Designer and Technical Writer Intern",
       img: snakeIcon,
@@ -58,7 +58,7 @@ export default function ExperiencePage() {
       date: "Sept 2020 - Jan 2021",
     },
     {
-      url: "http://localhost:3000/exp",
+      url: "https://isabeltovalles.com/exp",
       company: "Microsoft - Mojang Studios",
       position: "Software Engineer Intern",
       img: minecraft,
@@ -66,7 +66,7 @@ export default function ExperiencePage() {
       date: "June 2019 - Sept 2019",
     },
     {
-      url: "http://localhost:3000/exp",
+      url: "https://isabeltovalles.com/exp",
       company: "Microsoft - Mojang Studios",
       position: "Software Engineer Intern",
       img: minecraft,
@@ -89,8 +89,7 @@ export default function ExperiencePage() {
           Experience <sub> 🧋 </sub>
         </h1>
 
-        {/* TODO: Convert tailwind css to standard css into global */}
-        {/* TODO: Figure out spacing between title and grid */}
+        {/* TODO: Figure out spacing between experince title and card grid */}
 
         <div className="expGrid">
           {list.map((item, index) => (
