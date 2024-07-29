@@ -2,10 +2,10 @@ import Head from 'next/head'
 import NextImage from "next/image";
 import { useRouter } from 'next/router';
 import {Card, CardHeader, Divider, Image, CardFooter, CardBody, Button} from "@nextui-org/react";
-import COD from '../pictures/MW3_1.jpg'
+import callOfDuty from '../pictures/MW3.jpg'
 import minecraft from '../pictures/cube.jpg'  
 import sledge from '../pictures/sledgeHammer.jpg'
-import SU from '../pictures/seaRed.png'
+import seattleU from '../pictures/seaRed.png'
 import snakeIcon from '../pictures/snake.jpg'
 
 // *Note: There is combined tailwind css and standard css from global.css being used in this file 
@@ -21,7 +21,7 @@ export default function ExperiencePage() {
       url: "http://localhost:3000/exp",
       company: "Activision - Sledgehammer Games",
       position: "Associate Gameplay Engineer",
-      img: COD, // can't directly use the path, img won't show up on live 
+      img: callOfDuty, // can't directly use the path, img won't show up on live 
       location: "Foster City, CA",
       date: "Sept 2023 - Present",
     },
@@ -37,7 +37,7 @@ export default function ExperiencePage() {
       url: "http://localhost:3000/exp",
       company: "Seattle University - Computer Science Department",
       position: "Teaching Assistant",
-      img: SU,
+      img: seattleU,
       location: "Seattle, WA",
       date: "Sept 2022 - June 2023",
     },
@@ -45,7 +45,7 @@ export default function ExperiencePage() {
       url: "http://localhost:3000/exp",
       company: "Seattle University - Computer Science Department",
       position: "Tutor",
-      img: SU,
+      img: seattleU,
       location: "Seattle, WA",
       date: "Sept 2022 - June 2023",
     },
