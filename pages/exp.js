@@ -104,8 +104,8 @@ export default function ExperiencePage() {
                     radius='none'
                     alt={item.company}
                     src={item.img}
-                    width={245}
-                    height={245}
+                    width={720}
+                    height={720}
                   />
               </CardBody>
               <Divider/>
