@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
+//import Image from 'next/image'
 import pfp from '../public/chibi_pfp.png'
+import NextImage from "next/image";
 
 export default function Home() {
   return (
@@ -17,39 +18,18 @@ export default function Home() {
           Isabel T Ovalles <sub> 🧋 </sub>
         </h1>
 
-        <Image
+        <NextImage
           src={pfp}
           alt="Chibi drawing of Isabel Ovalles drinking boba with a video game controller next to her"
           width={300}
           height={300}
-          className="my-4"
+          className="my-4 opacity-100"
         />
         
         <p className="description aboutme">
           gameplay engineer | su comp sci 23&apos; | sea &rarr; sf
         </p>
 
-        <a href="https://isabeltovalles.com/exp" className="card">
-          <h2> Experience <sub> 📄 </sub>&rarr;</h2>
-          <p> COMING SOON! </p>
-        </a>
-
-        <div className="grid">
-          <a href="https://isabeltovalles.com/cs-resources/spill-tea" className="card">
-            <h2>Spill the Tea Resources <sub> 🧋 </sub> &rarr;</h2>
-            <p>List of resources for computer science internships.</p>
-          </a>
-          
-          <a href="https://isabeltovalles.com/socials" className="card">
-            <h2> Socials <sub> 👥 </sub> &rarr;</h2>
-            <p> Places I exist on the interwebs.</p>
-          </a>
-       
-          <a href="https://isabeltovalles.com/contact-me" className="card">
-            <h2>Contact Me <sub> ☎️ </sub>&rarr;</h2>
-            <p> Ways to get in touch!</p>
-          </a>
-        </div>
       </main>
     </div>
   )
