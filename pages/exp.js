@@ -2,11 +2,6 @@ import Head from 'next/head'
 import NextImage from "next/image";
 import { useRouter } from 'next/router';
 import {Card, CardHeader, Divider, Image, CardFooter, CardBody, Button} from "@nextui-org/react";
-import callOfDuty from '../pictures/MW3.jpg'
-import minecraft from '../pictures/cube.jpg'  
-import sledge from '../pictures/sledgeHammer.jpg'
-import seattleU from '../pictures/seaRed.png'
-import snakeIcon from '../pictures/snake.jpg'
 
 // *Note: There is combined tailwind css and standard css from global.css being used in this file 
 export default function ExperiencePage() {
@@ -21,7 +16,7 @@ export default function ExperiencePage() {
       url: "https://isabeltovalles.com/exp",
       company: "Activision - Sledgehammer Games",
       position: "Associate Gameplay Engineer",
-      img: callOfDuty, // can't directly use the path, img won't show up on live 
+      img: "/MW3.jpg", 
       location: "Foster City, CA",
       date: "Sept 2023 - Present",
     },
@@ -29,7 +24,7 @@ export default function ExperiencePage() {
       url: "https://isabeltovalles.com/exp",
       company: "Activision - Sledgehammer Games",
       position: "Gameplay Engineer Intern",
-      img: sledge,
+      img: "/sledgeHammer.jpg",
       location: "Foster City, CA",
       date: "June 2022 - Sept 2022",
     },
@@ -37,7 +32,7 @@ export default function ExperiencePage() {
       url: "https://isabeltovalles.com/exp",
       company: "Seattle University - Computer Science Department",
       position: "Teaching Assistant",
-      img: seattleU,
+      img: "/seaRed.png",
       location: "Seattle, WA",
       date: "Sept 2022 - June 2023",
     },
@@ -45,7 +40,7 @@ export default function ExperiencePage() {
       url: "https://isabeltovalles.com/exp",
       company: "Seattle University - Computer Science Department",
       position: "Tutor",
-      img: seattleU,
+      img: "/seaRed.png",
       location: "Seattle, WA",
       date: "Sept 2022 - June 2023",
     },
@@ -53,7 +48,7 @@ export default function ExperiencePage() {
       url: "https://isabeltovalles.com/exp",
       company: "Price Tech Press",
       position: "Game Designer and Technical Writer Intern",
-      img: snakeIcon,
+      img: "/snake.jpg",
       location: "Remote",
       date: "Sept 2020 - Jan 2021",
     },
@@ -61,7 +56,7 @@ export default function ExperiencePage() {
       url: "https://isabeltovalles.com/exp",
       company: "Microsoft - Mojang Studios",
       position: "Software Engineer Intern",
-      img: minecraft,
+      img: "/cube.jpg",
       location: "Redmond, WA",
       date: "June 2019 - Sept 2019",
     },
@@ -69,7 +64,7 @@ export default function ExperiencePage() {
       url: "https://isabeltovalles.com/exp",
       company: "Microsoft - Mojang Studios",
       position: "Software Engineer Intern",
-      img: minecraft,
+      img: "/cube.jpg",
       location: "Redmond, WA",
       date: "June 2018 - Aug 2018",
     },
@@ -109,6 +104,8 @@ export default function ExperiencePage() {
                     radius='none'
                     alt={item.company}
                     src={item.img}
+                    width={245}
+                    height={245}
                   />
               </CardBody>
               <Divider/>
