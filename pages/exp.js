@@ -194,19 +194,15 @@ export default function ExperiencePage() {
                     {currentItem.bulletPoints.map((point, index) => (        
                         <li key={index}>{point}</li>
                     ))}
-                      {currentItem.modalImgs && currentItem.modalImgs.length > 0 ? (
-                        currentItem.modalImgs.map((img, index) => (
-                          <Image
-                            key={index}
-                            alt={currentItem.company}
-                            src={img}
-                            width={400}
-                            height={400}
-                          />
-                        ))
-                      ) : (
-                          <p></p>
-                      )}
+                      {currentItem.modalImgs.map((img, index) => (
+                        <Image
+                          key={index}
+                          alt={currentItem.company}
+                          src={img}
+                          width={400}
+                          height={400}
+                        />
+                      ))}
                   </ModalBody>
                   <ModalFooter>
                     <Button color="danger" variant="light" onPress={onClose}>
