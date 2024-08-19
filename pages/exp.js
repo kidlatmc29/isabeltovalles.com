@@ -18,7 +18,7 @@ export default function ExperiencePage() {
       url: "https://isabeltovalles.com/exp",
       company: "Activision - Sledgehammer Games",
       position: "Associate Gameplay Engineer",
-      img: "/exp/MW3.jpg",
+      cardImg: "/exp/MW3.jpg",
       location: "Foster City, CA",
       date: "Sept 2023 - Present",
       bulletPoints: [
@@ -26,52 +26,60 @@ export default function ExperiencePage() {
         "Supporting the gameplay design team to create new features",
         "Reviewing proposed solutions for multiplayer gameplay issues",
         "Shipped Titles: Call of Duty: Modern Warfare 3 (2023)",
+      ],
+      modalImgs: [
       ]
     },
     {
       url: "https://isabeltovalles.com/exp",
       company: "Activision - Sledgehammer Games",
       position: "Gameplay Engineer Intern",
-      img: "/exp/sledgeHammer.jpg",
+      cardImg: "/exp/sledgeHammer.jpg",
       location: "Foster City, CA",
       date: "June 2022 - Sept 2022",
       bulletPoints: [
         "Developed a prototype gameplay feature for Call of Duty: Modern Warfare 3 (2023)",
         "Implemented the prototype using Call of Duty's proprietary scripting language, similar to Python and C",
         "Collaborated closely with the design team, incorporating their feedback into the development of the prototype",
+      ],
+      modalImgs: [
       ]
     },
     {
       url: "https://isabeltovalles.com/exp",
       company: "Seattle University - Computer Science Department",
       position: "Teaching Assistant",
-      img: "/exp/seaRed.png",
+      cardImg: "/exp/seaRed.png",
       location: "Seattle, WA",
       date: "Sept 2022 - June 2023",
       bulletPoints: [
         "Graded projects and labs for multiple courses of 30-35 students while providing detailed feedback",
         "Led weekly office hours to help students with assignments or to review programming concepts",
         "Provided feedback to course instructors regarding their projects and labs",
+      ],
+      modalImgs: [
       ]
     },
     {
       url: "https://isabeltovalles.com/exp",
       company: "Seattle University - Computer Science Department",
       position: "Tutor",
-      img: "/exp/seaRed.png",
+      cardImg: "/exp/seaRed.png",
       location: "Seattle, WA",
       date: "Sept 2022 - June 2023",
       bulletPoints: [
         "Led dropped in tutoring hours to support students in the introduction courses",
         "Helped students debug their coding assignments or review programming concepts",
         "Created sample coding questions for students to use when reviewing for exams",
+      ],
+      modalImgs: [
       ]
     },
     {
       url: "https://isabeltovalles.com/exp",
       company: "Price Tech Press",
       position: "Game Designer and Technical Writer Intern",
-      img: "/exp/snake.jpg",
+      cardImg: "/exp/snake.jpg",
       location: "Remote",
       date: "Sept 2020 - Jan 2021",
       bulletPoints: [
@@ -79,32 +87,41 @@ export default function ExperiencePage() {
         "Authored and revised 4 wiki pages for the book's code repository",
         "Reviewed and provided feedback for the author's storyline and text",
         "Researched Python-related libraries, tools, and technology, including Visual Studio Code and Pygames",
+      ],
+      modalImgs: [
       ]
     },
     {
       url: "https://isabeltovalles.com/exp",
       company: "Microsoft - Mojang Studios",
       position: "Software Engineer Intern",
-      img: "/exp/cube.jpg",
+      cardImg: "/exp/cube.jpg",
       location: "Redmond, WA",
       date: "June 2019 - Sept 2019",
       bulletPoints: [
         "Developed a Minecraft mini-game called Boba Dash on a 5-person intern team",
         "Led the gameplay design of Boba Dash, collaborating with engineers and artists",
         "Implemented custom animations and behaviors for a game entity in C++ and JSON",
+      ],
+      modalImgs: [
+        "/exp/all_icons.png",
+        "/exp/customer_with_skin.png",
+        "/exp/spawn_customer_item.png"
       ]
     },
     {
       url: "https://isabeltovalles.com/exp",
       company: "Microsoft - Mojang Studios",
       position: "Software Engineer Intern",
-      img: "/exp/cube.jpg",
+      cardImg: "/exp/cube.jpg",
       location: "Redmond, WA",
       date: "June 2018 - Aug 2018",
       bulletPoints: [
         "Ported the mini-game Glide from the Xbox 360 version of Minecraft into Bedrock Edition with another intern",
         "Designed the pre-game features of Glide",
         "Implemented pre-game features including spawn points, countdown timer, and immobilization of players in C++",
+      ],
+      modalImgs: [
       ]
     },
   ];
@@ -123,7 +140,7 @@ export default function ExperiencePage() {
           Experience <sub> 🧋 </sub>
         </h1>
 
-        <Spacer y={10} />
+        <Spacer y={10} /> 
 
         <div className="expGrid">
           {list.map((item, index) => (
@@ -142,7 +159,7 @@ export default function ExperiencePage() {
                     removeWrapper
                     radius='none'
                     alt={item.company}
-                    src={item.img}
+                    src={item.cardImg}
                     width={720}
                     height={720}
                   />
@@ -174,16 +191,22 @@ export default function ExperiencePage() {
                 <>
                   <ModalHeader className="flex flex-col gap-1">{currentItem.position} at {currentItem.company}</ModalHeader>
                   <ModalBody>
-                    {currentItem.bulletPoints.map((point, idx) => (        
-                        <li key={idx}>{point}</li>
+                    {currentItem.bulletPoints.map((point, index) => (        
+                        <li key={index}>{point}</li>
                     ))}
-                    <Image
-                      as={NextImage}
-                      alt={currentItem.company}
-                      src={currentItem.img}
-                      width={400}
-                      height={400}
-                    />
+                      {currentItem.modalImgs && currentItem.modalImgs.length > 0 ? (
+                        currentItem.modalImgs.map((img, index) => (
+                          <Image
+                            key={index}
+                            alt={currentItem.company}
+                            src={img}
+                            width={400}
+                            height={400}
+                          />
+                        ))
+                      ) : (
+                          <p></p>
+                      )}
                   </ModalBody>
                   <ModalFooter>
                     <Button color="danger" variant="light" onPress={onClose}>
