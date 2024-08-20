@@ -256,3 +256,13 @@ a {
   flex-direction: column;
   align-items: start;
 }
+
+.expCompany {
+  font-size: 1.125rem; /* Large text size */
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .expCompany {
+    font-size: 1rem; /* Medium text size */
+  }
+}
