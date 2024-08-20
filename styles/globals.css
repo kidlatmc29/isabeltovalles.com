@@ -227,9 +227,7 @@ a {
 }
 
 .expHeaderOuter {
-  height: 5rem;
-  padding-top: 1.25rem; 
-  padding-left: 1rem;
+  height: 6rem;
 }
 
 .expHeaderInner {
@@ -258,11 +256,11 @@ a {
 }
 
 .expCompany {
-  font-size: 1.125rem; /* Large text size */
+  font-size: 1.125rem; 
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .expCompany {
-    font-size: 1rem; /* Medium text size */
+    font-size: 1rem; 
   }
 }
