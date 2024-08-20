@@ -230,6 +230,12 @@ a {
   height: 6rem;
 }
 
+@media (min-width: 768px) and (max-width: 780px) {
+  .expHeaderOuter {
+    height: 7rem;
+  }
+}
+
 .expHeaderInner {
   display: flex;
   flex-direction: column;
