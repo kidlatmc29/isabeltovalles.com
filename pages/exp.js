@@ -273,7 +273,7 @@ export default function ExperiencePage() {
         
         {/* Infinte Scrolling Carousel */}
         <h1 className='title'> Languages / Frameworks / Technologies </h1>
-        <div className="scroller" data-direction="left" data-speed="slow">
+        {/* <div className="scroller" data-direction="left" data-speed="slow">
           <ul className="tag-list scroller__inner ">
             {frameworks.map((item, idx) => (
               <li key={idx}>{item}</li>
@@ -288,7 +288,7 @@ export default function ExperiencePage() {
               <li key={idx}>{item}</li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </main>
     </div>
   )
