@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import NextImage from "next/image";
-import { useState } from 'react';
+import { useState, useEffect, React } from 'react';
 import {Card, CardHeader, Divider, Image, CardFooter, CardBody, Button, Spacer, useDisclosure, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter} from "@nextui-org/react";
 
 // *Note: There is combined tailwind css and standard css from global.css being used in this file 
@@ -8,10 +8,34 @@ export default function ExperiencePage() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
   const [currentItem, setCurrentItem] = useState(null);
 
-  const openModal = (item) => {
-    setCurrentItem(item);
-    onOpen();
-  };
+  useEffect(() => {
+    const scrollers = document.querySelectorAll(".scroller");
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      addAnimation(scrollers);
+    }
+  }, []);
+
+  function addAnimation(scrollers) {
+    scrollers.forEach((scroller) => {
+      // add data-animated="true" to every `.scroller` on the page
+      scroller.setAttribute("data-animated", true);
+  
+      // Make an array from the elements within `.scroller-inner`
+      const scrollerInner = scroller.querySelector(".scroller__inner");
+      const scrollerContent = Array.from(scrollerInner.children);
+  
+      // For each item in the array, clone it
+      // add aria-hidden to it
+      // add it into the `.scroller-inner`
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute("aria-hidden", true);
+        scrollerInner.appendChild(duplicatedItem);
+      });
+    });
+  }
+
 
   const list = [
     {
@@ -126,8 +150,38 @@ export default function ExperiencePage() {
     },
   ];
 
+  const frameworks = [
+    "C++",
+    "C",
+    "C#",
+    "Java",
+    "JavaScript",
+    "Node.js",
+    "React.js",
+    "Node.js",
+    "Python",
+    "GO",
+  ];
+
+  const tools = [
+    "Perforce",
+    "Helix Swarm",
+    "Git",
+    "Github",
+    "Visual Studio Code",
+    "Visual Studio",
+    "IntelliJ",
+    "CLion",
+    "Jira",
+  ]
+
+  const openModal = (item) => {
+    setCurrentItem(item);
+    onOpen();
+  };
+
   return (
-    <div className="container">
+    <div className="container overflow-x-hidden">
       <Head>
         <title>ito&apos;s work experience</title>
         <meta name="description" content="ito" />
@@ -138,7 +192,7 @@ export default function ExperiencePage() {
       <main className="main">
         <h1 className="title">
           Experience <sub> 🧋 </sub>
-        </h1>
+        </h1> 
 
         <Spacer y={10} /> 
 
@@ -214,6 +268,27 @@ export default function ExperiencePage() {
             </ModalContent>
           </Modal>
         )}
+
+        <Spacer y={10} /> 
+        
+        {/* Infinte Scrolling Carousel */}
+        <h1 className='title'> Languages / Frameworks / Technologies </h1>
+        {/* <div className="scroller" data-direction="left" data-speed="slow">
+          <ul className="tag-list scroller__inner ">
+            {frameworks.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        <h1 className='title'> Tools </h1>
+        <div className="scroller" data-direction="right" data-speed="slow">
+          <ul className="tag-list scroller__inner ">
+            {tools.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </div> */}
       </main>
     </div>
   )
