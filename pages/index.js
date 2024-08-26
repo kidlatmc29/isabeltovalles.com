@@ -26,7 +26,7 @@ export default function Home() {
           className="my-4 opacity-100"
         />
         
-        <p className="description aboutme">
+        <p className="description">
           gameplay engineer | su comp sci 23&apos; | sea &rarr; sf
         </p>
 
