@@ -181,7 +181,7 @@ export default function ExperiencePage() {
   };
 
   return (
-    <div className="container overflow-x-hidden">
+    <div className="container">
       <Head>
         <title>ito&apos;s work experience</title>
         <meta name="description" content="ito" />
@@ -198,7 +198,7 @@ export default function ExperiencePage() {
 
         <div className="expGrid">
           {list.map((item, index) => (
-            <Card key={index}> 
+            <Card key={index} className="w-full"> 
               <CardHeader className='expHeaderOuter'> 
                 <div className="expHeaderInner">
                   <p className="expCompany">{item.company}</p>                      {/* Tailwind css */}
