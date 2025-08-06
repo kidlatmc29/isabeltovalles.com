@@ -37,15 +37,7 @@ export default function ResourcesPage() {
             </p>
       
           </div> 
-
-          <div className="card"> 
-            <h2> Full Recording 📹 </h2>
-            <p> COMING SOON! (I apologize for the delay, the past few months have been hectic...)  
-            </p>
-      
-          </div> 
     
-          
         </div>
 
       </main>
