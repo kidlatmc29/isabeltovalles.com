@@ -46,10 +46,11 @@ export default function ExperiencePage() {
       location: "Foster City, CA",
       date: "Sept 2023 - Present",
       bulletPoints: [
+        "Developing gameplay features in Call of Duty's C++ based game engine for premium titles and live season",
         "Resolving multiplayer gameplay issues to ensure intended functionality and enhance the gameplay experience",
         "Supporting the gameplay design team to create new features",
-        "Reviewing proposed solutions for multiplayer gameplay issues",
-        "Shipped Titles: Call of Duty: Modern Warfare 3 (2023)",
+        "Reviewing and providing feedback to proposed solutions for multiplayer gameplay issues",
+        "Shipped Titles: Call of Duty: Modern Warfare 3 (2023), Call of Duty: Black Ops 6, Call of Duty: Warzone",
       ],
       modalImgs: [
       ]
