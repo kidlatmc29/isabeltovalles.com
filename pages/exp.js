@@ -159,9 +159,8 @@ export default function ExperiencePage() {
     "JavaScript",
     "Node.js",
     "React.js",
-    "Node.js",
     "Python",
-    "GO",
+    "Go",
   ];
 
   const tools = [
