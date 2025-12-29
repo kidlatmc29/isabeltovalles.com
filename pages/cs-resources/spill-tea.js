@@ -16,7 +16,7 @@ export default function ResourcesPage() {
           Spill the Tea Resources <sub> 🧋 </sub>
         </h1>
 
-        <div className="grid">
+        <div className="spillTeaGrid">
           <a href="https://seattleu.instructure.com/courses/1600628" className="card">
             <h2> SU CS Department Canvas &rarr;</h2>
             <p>Resources to start, revise, or get feedback on your resumes.</p>
