@@ -27,7 +27,7 @@ export default function Home() {
         />
         
         <p className="description">
-          gameplay engineer | su comp sci 23&apos; | sea &rarr; sf
+          gameplay engineer | su comp sci 23&apos; | boba talks mentor | sea &rarr; sf
         </p>
 
       </main>
